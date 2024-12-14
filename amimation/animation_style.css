@@ -1,6 +1,10 @@
 
 .container {
-    background-color: red;
+    background-color: yellow;
+}
+
+.container-steps {
+    background-color: cyan;
 }
 
 .container:hover .hello{
@@ -10,6 +14,12 @@
 
 }
 
+.container-steps:hover .hello{
+    margin-left: calc(100% - 100px);
+    /*transition: all 1000ms ease;*/
+    transition: all 1000ms steps(10);
+
+}
 
 .hello {
     width: 100px;
