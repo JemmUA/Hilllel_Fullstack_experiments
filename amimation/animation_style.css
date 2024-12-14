@@ -1,0 +1,20 @@
+.hello {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    transition: width 1000ms ease;
+
+}
+
+.hello {
+    &:hover {
+        width: 200px;
+        transition: width 1000ms ease;
+    }
+}
