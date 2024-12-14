@@ -1,20 +1,39 @@
+
+.container {
+    background-color: red;
+}
+
+.container:hover .hello{
+    margin-left: calc(100% - 100px);
+    transition: all 1000ms ease;
+
+}
+
+
 .hello {
     width: 100px;
     height: 100px;
-    background-color: red;
+    background-color: blue;
     color: yellow;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 20px;
     font-weight: bold;
-    transition: width 1000ms ease;
+    /*transition: width 1000ms ease, background-color 1000ms ease;*/
+    transition: all 100ms ease;
 
 }
 
 .hello {
     &:hover {
+        background-color: green;
         width: 200px;
-        transition: width 1000ms ease;
+        font-size: 40px;
+
+        /*transition: width 1000ms ease, background-color 1000ms ease;*/
+        transition: all 1000ms ease;
     }
+
+
 }
