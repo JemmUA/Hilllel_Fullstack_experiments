@@ -48,7 +48,7 @@
     }
 }
 
-.item-transform {
+.item-transform_rotation {
     width: 100px;
     height: 100px;
     font-weight: bold;
@@ -61,12 +61,196 @@
     transition: all 3s ease;
 }
 
-.item-transform:hover {
-    width: 100px;
+.item-transform_rotation:hover {
+    width: 150px;
     height: 100px;
     background-color: yellow;
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: rotate(720deg);
+    /*transform: rotate(720deg);*/
+    transform: rotate(3.5turn);
+}
+
+
+.item-transform_translation {
+    width: 150px;
+    height: 100px;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: purple;
+    color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 3s ease;
+    /*transition: margin-left 300ms ease 2s, rotate 300ms ease 2s, translate 300ms ease 2s;*/
+}
+
+
+.item-transform_translation:hover {
+    width: 150px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    transform: translate(50px, -50px);
+}
+
+    .item-zoom {
+        width: 170px;
+        height: 100px;
+        font-weight: bold;
+        font-size: 20px;
+        background-color: lawngreen;
+        color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 3s ease;
+    }
+
+    .item-zoom:hover {
+        width: 170px;
+        height: 100px;
+        background-color: lawngreen;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transform: scale(1.7);
+        /*transform: scaleX(1.7);*/
+        /*transform: scaleY(1.7);*/
+        /*transform: scaleZ(1.7);*/
+}
+
+    .item-skew {
+        width: 170px;
+        height: 100px;
+        font-weight: bold;
+        font-size: 20px;
+        background-color: orangered;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 3s ease;
+    }
+
+    .item-skew:hover {
+        width: 170px;
+        height: 100px;
+        background-color: orangered;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /*transform: skew(-45deg);*/
+        /*transform: skewX(-45deg);*/
+        transform: skewY(-45deg);
+}
+
+    .item-rotate3d {
+        width: 170px;
+        height: 100px;
+        font-weight: bold;
+        font-size: 20px;
+        background-color: cornflowerblue;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 3s ease;
+    }
+
+    .item-rotate3d:hover {
+        width: 170px;
+        height: 100px;
+        background-color: cornflowerblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /*transform: rotateX(45deg);*/
+        /*transform: rotateY(45deg);*/
+        /*transform: rotateZ(45deg);*/
+        transform: rotateX(45deg) rotateY(145deg);
+}
+
+    /*======= Keyframes animation =======*/
+/*animation-name, animation-duration, animation-timing-function,*/
+/*animation-delay, animation-iteration-count, animation-direction, */
+/*animation-fill-mode, animation-play-state*/
+
+/*
+@keyframes  animated_item{
+
+    == from to ==
+
+    from {
+        margin-left: 20px;
+    }
+
+    to {
+        margin-left: 220px;
+    }
+
+*/
+    /*=== percent ===*/
+/*
+    0% {
+        margin-left: 20px;
+    }
+
+    50% {
+        margin-left: 220px;
+    }
+
+    100% {
+        margin-left: 120px;
+    }
+
+}
+*/
+
+.item-keyframe {
+    width: 200px;
+    height: 200px;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    background-color: green;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-keyframe {
+    animation-name: box;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    /*animation-delay: 1ms;*/
+    /*animation-fill-mode: forwards;*/
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.item-keyframe:hover {
+    animation-play-state: paused;
+}
+
+@keyframes box {
+    0% {
+        margin-left: -200px;
+    }
+
+    50.5% {
+        margin-left: 800px;
+    }
+
+    100% {
+        margin-left: calc(100% + 200px);
+    }
 }
