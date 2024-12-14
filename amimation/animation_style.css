@@ -17,8 +17,10 @@
 .container-steps:hover .hello{
     margin-left: calc(100% - 100px);
     /*transition: all 1000ms ease;*/
-    transition: all 1000ms steps(10);
 
+    /*Анімація для всіх використаних атрибутів за одну секунду
+    і за десять кроків із затримкою пів секунди*!*/
+    transition: all 1000ms steps(10) 0.5s;
 }
 
 .hello {
@@ -32,8 +34,7 @@
     font-size: 20px;
     font-weight: bold;
     /*transition: width 1000ms ease, background-color 1000ms ease;*/
-    transition: all 100ms ease;
-
+    transition: all 100ms ease; /*Зворотня анімація*/
 }
 
 .hello {
@@ -45,6 +46,27 @@
         /*transition: width 1000ms ease, background-color 1000ms ease;*/
         transition: all 1000ms ease;
     }
+}
 
+.item-transform {
+    width: 100px;
+    height: 100px;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: yellow;
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 3s ease;
+}
 
+.item-transform:hover {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(720deg);
 }
