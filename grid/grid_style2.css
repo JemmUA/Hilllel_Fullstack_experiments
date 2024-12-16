@@ -1,0 +1,19 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.item {
+    background-color: lightblue;
+    border: 1px solid black;
+    /*height: 30px;*/
+}
+
+.special {
+    background-color: red;
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 3;
+    /*grid-area: 2 / 1 / span 3/ span 2;*/
+    justify-self: start;
+    align-self: start;
+}
