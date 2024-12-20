@@ -1,0 +1,12 @@
+.container__flex {
+    width: 100%;
+    height: 100vw;
+    background-color: cornflowerblue;
+    border: 1px solid red;
+}
+
+.item__flex {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}

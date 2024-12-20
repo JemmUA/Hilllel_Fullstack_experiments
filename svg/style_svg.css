@@ -1,0 +1,39 @@
+body {
+  background: url("example.svg") no-repeat right top fixed;
+}
+
+.circle__exp {
+  fill: red;
+  transition: 2s;
+
+}
+
+/*.circle__exp:hover {*/
+/*  fill: red;*/
+/*}*/
+
+/*svg:hover .circle__exp {*/
+/*  fill: red;*/
+/*}*/
+
+
+.circle__exp {
+  &:hover {
+    fill: green;
+    stroke-width: 40;
+    stroke: yellow;
+  }
+}
+
+.field__for__viewBox {
+  width:500px;
+  height:500px;
+  border: 10px solid red;
+}
+
+.field__for__polygon {
+  width:350px;
+  height:350px;
+  border: 3px solid grey;
+  background-color: cornflowerblue;
+}
