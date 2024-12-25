@@ -1,0 +1,18 @@
+.orange__center {
+  background-color: orange;
+  text-align: center;
+  border: 1px solid black;
+}
+.border__1px--black {
+  border: 1px solid black;
+}
+
+.size__400x300 {
+  width: 400px;
+  height: 300px;
+}
+
+.item__center {
+  display: flex;
+  justify-content: center;
+}
