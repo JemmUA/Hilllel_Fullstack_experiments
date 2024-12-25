@@ -12,6 +12,11 @@
   height: 300px;
 }
 
+.size__800x600 {
+  width: 800px;
+  height: 600px;
+}
+
 .item__center {
   display: flex;
   justify-content: center;
