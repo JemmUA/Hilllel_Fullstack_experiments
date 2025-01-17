@@ -43,6 +43,7 @@ console.log("Remainder of division - age % 10 :", age % 10)
 
 console.log("There is not  integer division")
 
+    // Recommended to use === but not == !!!
 console.log("Comparing operator == trys to cast - '10' == 10:", '10' == 10);
 console.log("Comparing operator != trys to cast - '10' != 10:", '10' != 10);
 console.log("Comparing operator === compares as is '10' === 10:", '10' === 10);
