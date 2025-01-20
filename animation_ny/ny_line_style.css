@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.ny__img__container {
+    background-color: green;
+    width: 100%;
+    height: 12vw;
+}
+
+.kf__image_01,
+.kf__image_02,
+.kf__image_03,
+.kf__image_04,
+.kf__image_05,
+.kf__image_06,
+.kf__image_07,
+.kf__image_08,
+.kf__image_09,
+.kf__image_10 {
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    border: 3px solid red;
+    position: absolute;
+    top:1vw;
+    left: -12%;
+    transition: all 2s ease;
+
+}
+
+
+.kf__image_01:hover,
+.kf__image_02:hover,
+.kf__image_03:hover,
+.kf__image_04:hover,
+.kf__image_05:hover,
+.kf__image_06:hover,
+.kf__image_07:hover,
+.kf__image_08:hover,
+.kf__image_09:hover,
+.kf__image_10:hover {
+    animation-play-state: paused;
+    cursor: grab;
+    z-index: 1000;
+}
+
+.kf__image_01:active,
+.kf__image_02:active,
+.kf__image_03:active,
+.kf__image_04:active,
+.kf__image_05:active,
+.kf__image_06:active,
+.kf__image_07:active,
+.kf__image_08:active,
+.kf__image_09:active,
+.kf__image_10:active {
+    cursor: grabbing;
+    box-sizing: content-box;
+    border-radius: 2%;
+    border: 25px solid white;
+    width: 30vw;
+    height: 16.875vw;
+    z-index: 1000;
+    /*transform: rotateZ(0deg);*/
+}
+
+.kf__image_01,
+.kf__image_02,
+.kf__image_03,
+.kf__image_04,
+.kf__image_05,
+.kf__image_06,
+.kf__image_07,
+.kf__image_08,
+.kf__image_09,
+.kf__image_10
+{
+    animation-name: roll;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    /*animation-delay: 1ms;*/
+    /*animation-fill-mode: forwards;*/
+    animation-iteration-count: infinite;
+    /*animation-direction: alternate;*/
+}
+
+.kf__image_01 {
+   animation-delay: 0s;
+}
+
+.kf__image_02 {
+   animation-delay: 1s;
+}
+
+.kf__image_03 {
+   animation-delay: 2s;
+}
+
+.kf__image_04 {
+   animation-delay: 3s;
+}
+
+.kf__image_05 {
+   animation-delay: 4s;
+}
+
+.kf__image_06 {
+   animation-delay: 5s;
+}
+
+.kf__image_07 {
+   animation-delay: 6s;
+}
+
+.kf__image_08 {
+   animation-delay: 7s;
+}
+
+.kf__image_09 {
+   animation-delay: 8s;
+}
+
+.kf__image_10 {
+   animation-delay: 9s;
+}
+
+
+@keyframes roll {
+    0% {
+        left: -12%;
+        transform: rotate(0turn);
+    }
+
+    50% {
+        left: 50%;
+        transform: rotate(1.5turn);
+    }
+
+    100% {
+        left: calc(100% + 200px);
+        transform: rotate(3turn);
+    }
+}
+
