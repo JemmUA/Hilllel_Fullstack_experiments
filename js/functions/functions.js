@@ -42,3 +42,24 @@ function washDishes(timeForDoingDishes, callback) {
 washDishes(1000, function() {
     console.log('Посуд вимито!');
 });
+
+// Анонімна функція
+// function () {
+//     console.log("Анонімна функція");
+// }
+
+// Застосування анонімної функції. Можна покласти в змінну.
+let anonFunc = function () {
+    console.log("Анонімна функція");
+}
+
+// Виклик анонімної функції в змінній
+anonFunc();
+
+// IIEF - Immediately Invoked Function Expression
+// Одноразовий миттєвий виклик анонімної функції
+// Беремо в дужки та додаємо дужки параметрів
+(function () {
+    console.log("IIEF. Анонімна функція. Одноразовий виклик.");
+})();
+
