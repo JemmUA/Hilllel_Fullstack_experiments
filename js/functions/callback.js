@@ -42,3 +42,6 @@ cook(makeTea, 3);
 cook(makeCoffee, 1);
 cook(makeCoffee, -10);
 cook(makeTea);
+cook(function() {
+  return("Anonymous function test!");
+}, 5);
