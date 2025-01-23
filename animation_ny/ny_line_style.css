@@ -43,6 +43,7 @@ body {
 .kf__image_09:hover,
 .kf__image_10:hover {
     animation-play-state: paused;
+    /*cursor: zoom-in;*/
     cursor: grab;
     z-index: 1000;
 }
@@ -57,14 +58,29 @@ body {
 .kf__image_08:active,
 .kf__image_09:active,
 .kf__image_10:active {
-    cursor: grabbing;
-    box-sizing: content-box;
-    border-radius: 2%;
-    border: 25px solid white;
-    width: 30vw;
-    height: 16.875vw;
-    z-index: 1000;
-    /*transform: rotateZ(0deg);*/
+
+  /*animation-name: unroll;*/
+  /*animation-duration: 5s;*/
+  /*animation-timing-function: linear;*/
+  /*animation-delay: 1ms;*/
+  /*animation-fill-mode: forwards;*/
+  /*animation-iteration-count: infinite;*/
+  /*animation-iteration-count: initial;*/
+  /*animation-direction: alternate;*/
+
+  /*position: fixed;*/
+  /*top: 5%;*/
+  /*left: 0;*/
+
+
+  cursor: grabbing;
+  box-sizing: content-box;
+  border-radius: 2%;
+  border: 25px solid white;
+  width: 30vw;
+  height: 16.875vw;
+  z-index: 1000;
+  /*transform: rotateZ(0deg);*/
 }
 
 .kf__image_01,
@@ -134,14 +150,30 @@ body {
         transform: rotate(0turn);
     }
 
-    50% {
-        left: 50%;
-        transform: rotate(1.5turn);
-    }
+    /*50% {*/
+    /*    left: 50%;*/
+    /*    transform: rotate(1.5turn);*/
+    /*}*/
 
     100% {
-        left: calc(100% + 200px);
+        left: calc(112%);
         transform: rotate(3turn);
     }
+}
+
+@keyframes unroll {
+  0% {
+    left: 20%;
+    /*        left: 38vw;*/
+    /*        top: 20%;*/
+    transform: rotate(.5turn);
+  }
+
+  100% {
+    left: 30%;
+    /*        left: 38vw;*/
+    /*        top: 20%;*/
+    transform: rotate(1turn);
+  }
 }
 
