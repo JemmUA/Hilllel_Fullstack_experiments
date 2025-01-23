@@ -33,15 +33,15 @@ function makeCoffee (sugarSpoons) {
   }
 }
 
-function cook (cb, sugarAmount) {
+function cook (cb, sugarAmount, wish= "Bon appetit!") {
 
-  console.log(cb(sugarAmount), "Bon appetit!");
+  console.log(cb(sugarAmount), wish);
 }
 
-cook(makeTea, 3);
+cook(makeTea, 3, "Have a nice day!");
 cook(makeCoffee, 1);
-cook(makeCoffee, -10);
-cook(makeTea);
+cook(makeCoffee, -10, "Don't get upset!!");
+cook(makeTea, 0, "Don't worry, be happy!!!");
 cook(function() {
-  return("Anonymous function test! Drink some tap water ;))");
-}, 5);
+  return("Anonymous function test!");
+}, 5, "Drink some tap water ;))");
