@@ -1,4 +1,8 @@
 "use strict";
+import {greetings} from "./functions_lib.js";
+
+greetings("Heeeeeeey!") // imported function
+
 
 //Function Declaration
 function sum(a, b) {
