@@ -1,4 +1,3 @@
-// package experemental.js.oop.classes;
 import {Car} from './Car.js';
 console.log("Hello World!");
 
