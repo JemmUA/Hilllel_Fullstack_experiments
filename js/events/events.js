@@ -49,3 +49,22 @@ const myInputListeners = [...inputEvents]
     }
   }));
 
+const elementsForClick = document.querySelectorAll(".clickable");
+
+[...elementsForClick].forEach(element => element.addEventListener("click", function (event) {
+  console.log(event.target, "|", this, event.target === this);
+  // if (event.target === this) {
+  //   console.log("Clicked element with listener", event.target, "|", this, event.target === this);
+  // }
+}));
+
+
+// Спливання по DOM
+
+const containerElement = document.getElementById("container");
+
+containerElement.addEventListener("click", function (event) {
+  if (event.target.matches("#container>div")) { // перевірка таргету, що він є сином контейнера
+    event.target.style.backgroundColor = "orange";
+  }
+});
