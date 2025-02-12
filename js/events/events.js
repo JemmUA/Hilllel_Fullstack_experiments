@@ -32,9 +32,11 @@ eventTestElement.addEventListener("mouseout", function (event) {
 
 
 const inputEvent = document.getElementsByClassName("my-input")[0];
-const myInputListener = inputEvent.addEventListener("change", function (event) {
+const myInputListener = inputEvent.addEventListener("change", function (event) {// для події keydown event cpde повертає клавішу.
   console.log("My input:", event.target.value);
   console.log("My input:", inputEvent.value);
+  console.log("event.target.code", event.code);
+  // console.log("event.target.code", event.code); // для події keydown
 });
 
 const inputEvents = document.getElementsByClassName("my-input-multy");
@@ -43,9 +45,14 @@ const myInputListeners = [...inputEvents]
     console.log("My input:", event.target.value);
     if (isNaN(event.target.value)) {
       event.target.style.borderColor = "red";
+      event.target.style.backgroundColor = "orange";
+      event.target.style.borderWidth = "5px";
       // style - власивість елемента, щоб керувати інлайн стилями, і дозволяти керувати окремо різним стилями(колір, фон ... окремо а не в цілому весь стиль як css)    }
+      event.stopPropagation(); // зупинка спливання.
     } else {
       event.target.style.borderColor = "green";
+      event.target.style.backgroundColor = "lightgreen";
+      event.target.style.borderWidth = "5px";
     }
   }));
 
@@ -59,12 +66,56 @@ const elementsForClick = document.querySelectorAll(".clickable");
 }));
 
 
-// Спливання по DOM
+// Спливання по DOM, делегування подій
 
 const containerElement = document.getElementById("container");
 
 containerElement.addEventListener("click", function (event) {
   if (event.target.matches("#container>div")) { // перевірка таргету, що він є сином контейнера
     event.target.style.backgroundColor = "orange";
+  }
+});
+
+// Запобігання дефолту
+
+const linkElement = document.getElementById("link");
+linkElement.addEventListener("click", function (event) {
+  event.target.innerText = event.target.innerText.toUpperCase();
+  if (!event.shiftKey) {
+    event.target.innerText = event.target.innerText.toUpperCase();
+    event.preventDefault(); // Запобігання дефолту
+    event.stopPropagation();
+  }
+});
+
+
+// Modal window
+
+const showModalElement = document.getElementById("showModal");
+const modalWindow = document.getElementById("cover");
+const closeModalButton = document.getElementById("closeModal");
+const agreeCheckBox = document.getElementById("agree");
+
+function showModal() {
+  modalWindow.classList.remove("hidden");
+}
+
+function hideModal(event) {
+  if (event.target === this) {
+    modalWindow.classList.add("hidden");
+  }
+}
+
+showModalElement.addEventListener("click", showModal);
+
+closeModalButton.addEventListener("click", hideModal);
+
+modalWindow.addEventListener("click", hideModal);
+
+agreeCheckBox.addEventListener("change", (event) => {
+  if (this.checked) {
+    closeModalButton.removeAttribute("disabled");
+  } else {
+    closeModalButton.toggleAttribute("disabled");
   }
 });
