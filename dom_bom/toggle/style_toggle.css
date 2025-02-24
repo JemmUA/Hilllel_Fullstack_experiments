@@ -1,0 +1,15 @@
+* {
+    padding: 10px;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.border {
+    border: 10px solid black;
+}
