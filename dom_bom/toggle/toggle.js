@@ -8,6 +8,6 @@ function toggle() {
     console.log(divchik.classList);
     divchik.classList.toggle("green");
     divchik.classList.toggle("red");
-    console.log("toggle green, toggle red")
+    console.log("toggle green, toggle red");
     console.log(divchik.classList);
 }
