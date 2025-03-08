@@ -84,3 +84,19 @@ async function getData() {
     document.getElementById("data").innerHTML = data;
 }
 getData();
+
+
+// Приклад JSON рядка
+const jsonString = '{"name":"John", "age":30, "city":"New York"}';
+
+// Конвертація JSON рядка в JavaScript об'єкт
+const jsObject = JSON.parse(jsonString);
+
+console.log(jsObject.name); // Виводить "John"
+console.log(jsObject.age);  // Виводить 30
+console.log(jsObject.city); // Виводить "New York"
+
+// Конвертація JavaScript об'єкта назад в JSON рядок
+const newJsonString = JSON.stringify(jsObject);
+
+console.log(newJsonString); // Виводить '{"name":"John","age":30,"city":"New York"}'
