@@ -72,3 +72,5 @@ fetch('https://jsonplaceholder.typicode.com/posts/1')
     .then(data => console.log(data)) // Обробка отриманих даних
     .catch(error => console.error('Помилка:', error)); // Обробка помилок запиту
 
+
+document.getElementById("something").innerHTML = "Some data";
