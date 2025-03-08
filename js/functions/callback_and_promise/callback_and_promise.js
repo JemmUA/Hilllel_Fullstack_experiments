@@ -1,5 +1,7 @@
 console.log("Callback and Promise");
 
+const weatherLink = 'http://api.openweathermap.org/data/2.5/weather?q=KHARKIV&units=metric&APPID=5d066958a60d315387d9492393935c19';
+
 function waitAndRun(ms, callback) {
     console.log('Таймер стартував');
     setTimeout(() => {
@@ -74,3 +76,11 @@ fetch('https://jsonplaceholder.typicode.com/posts/1')
 
 
 document.getElementById("something").innerHTML = "Some data";
+
+// await in async
+async function getData() {
+    const data = await fetch(weatherLink).then(response => response.json());
+    console.log("Data:", data);
+    document.getElementById("data").innerHTML = data;
+}
+getData();
