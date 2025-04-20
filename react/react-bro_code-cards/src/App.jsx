@@ -4,10 +4,11 @@ import Card from "./components/Card.jsx";
 function App() {
 
   return (
-    <>
-        Cards
+    <div className="cards__container">
         <Card/>
-    </>
+        <Card/>
+        <Card/>
+    </div>
   )
 }
 
