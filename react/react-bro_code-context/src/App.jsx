@@ -1,33 +1,31 @@
+// useContext - React Hook that allows you to share values
+//               between multiple levels of component without
+//               passing props through each level
+
+// PROVIDER COMPONENT
+// 1. import {createContext} from 'react';
+// 2. export const MyContext = createContext();
+// 3. <MyContext.Provider value={value}>
+//       <Child/>
+//    </MyContext.Provider>
+
+// CONSUMER COMPONENT
+// 1. import React, {useContext} from 'react';
+//    import { MyContext } from './ComponentA';
+// 2. const value = useContext(MyContext);
+
+
+
+
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import ComponentA from "./ComponentA.jsx";
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <ComponentA/>
     </>
   )
 }
