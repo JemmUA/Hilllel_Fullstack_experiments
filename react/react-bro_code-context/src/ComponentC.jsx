@@ -11,9 +11,7 @@ function ComponentC() {
       <div className="box">
         <p>ComponentC</p>
         {/*<ComponentD user={props.user}/>*/}
-        <div>
-          Here we are! It was easy, {user}!!!
-        </div>
+        <div>Here we are! It was easy, {user}!!!</div>
         <ComponentD/>
       </div>
     </div>
