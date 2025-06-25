@@ -15,7 +15,8 @@
 
 <script>
   const messagesDiv = document.getElementById('messages');
-  const socket = io('http://localhost:3021');
+  // const socket = io('http://localhost:3021');
+  const socket = io('http://31.40.104.38:3021');
 
   socket.on('connect', ()=> {
     console.log("Connected to socket server");
