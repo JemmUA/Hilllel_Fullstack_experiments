@@ -10,7 +10,13 @@ const server = http.createServer((request, response)=> {
   response.write("Write!");
   response.write('<h1>Hello, my server )))</h1>');
 
-  // console.log(request.url); // request's url
+  console.log(request.url); // request's url
+
+  if (request.url === '/test-url') {
+    console.log("request test-url:", request.url);
+    response.end('<h1> Test is OK</h1>');
+    return;
+  }
 
   // if (request.url === '/css') {
   //   response.setHeader ('Content-Type', 'text/css');

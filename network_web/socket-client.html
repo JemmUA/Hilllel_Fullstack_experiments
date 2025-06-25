@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Socket client</title>
+  <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+</head>
+<body>
+<h1>Чат "Побалакаємо!"</h1>
+<input type="text" id="messageInput" placeholder="Ну, скажи вже щось!" />
+<button onclick="sendMessage()">Надіслати</button>
+
+<div id="messages"></div>
+
+
+<script>
+  const messagesDiv = document.getElementById('messages');
+  const socket = io('http://localhost:3021');
+
+  socket.on('connect', ()=> {
+    console.log("Connected to socket server");
+  });
+  socket.on('disconnect', ()=> {
+    console.log("Disconnected from socket server");
+  });
+
+  socket.on('replay', message => {
+    // console.log(message);
+    addMessage(`Sever: ${message}`)
+  })
+
+  function sendMessage() {
+    const input = document.getElementById('messageInput');
+    const text = input.value.trim();
+    if (text) {
+      socket.emit('message', text);
+      addMessage('Ви (client): ', text);
+      input.value = '';
+    }
+  }
+
+  function addMessage(text) {
+    const div = document.createElement('div');
+    div.className = 'msg';
+    div.textContent = text;
+    messagesDiv.appendChild(div);
+  }
+</script>
+</body>
+</html>
