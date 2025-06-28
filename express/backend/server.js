@@ -16,7 +16,12 @@ app.get('/', (request, response) => {
 });
 
 app.get('/rerequests', annoyingUser);
-app.get('/users/:id', userInfo);
+
+
+// app.get('/users/:id', userInfo);
+app.route('/users/:id')
+  .get(userInfo);
+
 
 
 app.listen(PORT, () => {
