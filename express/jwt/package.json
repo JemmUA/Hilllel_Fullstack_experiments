@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "secure.js",
   "scripts": {
-    "devmon": "node_modules/.bin/nodemon secure.js"
+    "devmon": "nodemon secure.js"
   },
   "keywords": [],
   "author": "",
