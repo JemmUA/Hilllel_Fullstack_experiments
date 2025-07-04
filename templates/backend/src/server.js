@@ -14,7 +14,7 @@ const app = express();
 app.set('view engine', 'ejs');
 app.get('/', (req, res) => {
   const data = {title: 'Main page with EJS', message: "Hello,  great world! ))", content: 'My content on EJS... oh yes )))'};
-  res.render('index', data);
+  res.status(200).render('index', data);
 });
 
 
